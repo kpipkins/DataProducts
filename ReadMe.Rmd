@@ -36,4 +36,5 @@ Minimal data reshaping was required for the exercise
 5. Histogram of Deaths Each Day
 
 Using a radio button widget the user can select one graph at a time and see the results
+Temporarily hosted at: https://kpipkins.shinyapps.io/DevDataProd/
 
