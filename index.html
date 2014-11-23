@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exploratory Analysis of Ebola Data</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Exploratory Analysis of Ebola Data">
+  <meta name="author" content="Kyle Pipkins">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Exploratory Analysis of Ebola Data</h1>
+    <h2>Developing Data Products Class Project</h2>
+    <p>Kyle Pipkins<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Acquiring the Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Data for this exercise was pulled from <a href="https://github.com/cmrivers/ebola">https://github.com/cmrivers/ebola</a>. </p>
+
+<p>Data has been processed and normalized by various contributors.</p>
+
+<p>The scope of my exercise is to simply take normalized data and allow users to explore it by pre-populating various graphs.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Producing Graphs</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>All graphs were produced with package ggplot2 using the function qplot</p>
+
+<p>Minimal data reshaping was required for the exercise</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Example of Code</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>To perform the calculation I allow the user to enter a value and then calculate the absolute difference, ex:</p>
+
+<pre><code class="r">guess &lt;- 80
+answer &lt;- 100
+diff &lt;- abs(guess-answer)
+diff
+</code></pre>
+
+<pre><code>## [1] 20
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>End Product</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>5 Graphs were produced</p>
+
+<ol>
+<li>All Countries Time Series of Cases</li>
+<li>All Countries Time Series of Deaths</li>
+<li>Total Cases vs Deaths by Country</li>
+<li>Histogram of Cases Each Day</li>
+<li>Histogram of Deaths Each Day</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Link to Find the App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>My shiny app is hoted here: <a href="https://kpipkins.shinyapps.io/DevDataProd/">https://kpipkins.shinyapps.io/DevDataProd/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Acquiring the Data'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Producing Graphs'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Example of Code'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='End Product'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Link to Find the App'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

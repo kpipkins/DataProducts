@@ -2,8 +2,6 @@
 library(RCurl)
 library(ggplot2)
 library(shiny)
-library(plyr)
-library(reshape2)
 
 url <- "https://raw.githubusercontent.com/kpipkins/DataProducts/master/Data/EbolaCountryTimeSeries.csv"
 
