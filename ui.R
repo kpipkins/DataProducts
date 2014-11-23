@@ -14,12 +14,16 @@ shinyUI(fluidPage(
                       "Total Cases vs Deaths by Country" = "plot3",
                       "Histogram of Cases Each Day" = "plot4",
                       "Histogram of Deaths Each Day" = "plot5"),
-          selected = "plot1")
+          selected = "plot1"),
+       numericInput("guess",
+          label = "How many Ebola cases do you think have been reported since March 2014?",
+          value=NA)
     ),
     
     mainPanel(
       p("Data Provided by Caitlin Rivers on GitHub"),
-      plotOutput("plot")
+      plotOutput("plot"),
+      textOutput("answer")
     )
   )
 ))

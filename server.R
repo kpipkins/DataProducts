@@ -12,6 +12,7 @@ df <- read.csv(textConnection(data))
 df_cases <- df[df$Type=='Cases',]
 df_deaths <- df[df$Type=='Deaths',]
 df_wide <- aggregate(df$Value, by=list(Type=df$Type,Country=df$Country), FUN=sum)
+total_cases <- sum(df$Value)
 
 shinyServer(function(input, output) {
   
@@ -33,7 +34,13 @@ shinyServer(function(input, output) {
     }
   })
   
+  diff <- reactive({
+    answer <- abs(input$guess-total_cases)
+  })
   output$plot <- renderPlot({
     print(plot())
+  })
+  output$answer <- renderText({
+    paste("You are ", print(diff()), "cases away from the right answer.")
   })
 })
